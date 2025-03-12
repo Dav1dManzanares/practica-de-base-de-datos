@@ -1,0 +1,47 @@
+-- Insertar datos de ejemplo en la tabla Videojuegos
+INSERT INTO videojuegos (titulo, plataforma, genero, desarrollador, precio, fecha_lanzamiento, stock, clasificacion_edad)
+VALUES 
+('The Legend of Zelda: Breath of the Wild', 'Nintendo Switch', 'Aventura', 'Nintendo', 59.99, '2017-03-03', 25, 'E10+'),
+('Red Dead Redemption 2', 'PlayStation 4', 'Acción', 'Rockstar Games', 49.99, '2018-10-26', 30, 'M'),
+('FIFA 2025', 'Xbox Series X', 'Deportes', 'EA Sports', 69.99, '2024-09-27', 50, 'E'),
+('Cyberpunk 2077', 'PC', 'RPG', 'CD Projekt Red', 39.99, '2020-12-10', 15, 'M'),
+('Animal Crossing: New Horizons', 'Nintendo Switch', 'Simulación', 'Nintendo', 54.99, '2020-03-20', 20, 'E');
+
+-- Insertar datos de ejemplo en la tabla Clientes
+INSERT INTO clientes (nombre, apellido, email, telefono, direccion, fecha_registro, membresia)
+VALUES 
+('Ana', 'García', 'ana.garcia@email.com', '123-456-7890', 'Calle Principal 123', '2022-01-15', 'Premium'),
+('Juan', 'López', 'juan.lopez@email.com', '234-567-8901', 'Avenida Central 456', '2022-03-20', 'Regular'),
+('María', 'Martínez', 'maria.martinez@email.com', '345-678-9012', 'Plaza Mayor 789', '2022-06-10', 'VIP'),
+('Carlos', 'Sánchez', 'carlos.sanchez@email.com', '456-789-0123', 'Calle Secundaria 234', '2022-09-05', 'Regular'),
+('Laura', 'Rodríguez', 'laura.rodriguez@email.com', '567-890-1234', 'Avenida Principal 567', '2023-01-18', 'Premium');
+
+-- Insertar datos de ejemplo en la tabla Empleados
+INSERT INTO empleados (nombre, apellido, dni, cargo, fecha_contratacion, salario, telefono, email)
+VALUES 
+('Pedro', 'Ramírez', '12345678A', 'Vendedor', '2021-02-15', 1800.00, '678-901-2345', 'pedro.ramirez@tienda.com'),
+('Sofía', 'Fernández', '23456789B', 'Supervisor', '2020-07-10', 2500.00, '789-012-3456', 'sofia.fernandez@tienda.com'),
+('Miguel', 'Torres', '34567890C', 'Vendedor', '2022-01-20', 1800.00, '890-123-4567', 'miguel.torres@tienda.com'),
+('Elena', 'Díaz', '45678901D', 'Gerente', '2019-05-05', 3200.00, '901-234-5678', 'elena.diaz@tienda.com'),
+('Javier', 'Moreno', '56789012E', 'Vendedor', '2022-11-15', 1800.00, '012-345-6789', 'javier.moreno@tienda.com');
+
+-- Insertar datos de ejemplo en la tabla Ventas
+INSERT INTO ventas (fecha_venta, id_cliente, id_empleado, total, metodo_pago)
+VALUES 
+('2023-03-15 10:30:00', 1, 1, 59.99, 'Tarjeta'),
+('2023-04-20 16:45:00', 2, 3, 119.98, 'Efectivo'),
+('2023-05-10 14:20:00', 3, 2, 129.98, 'Tarjeta'),
+('2023-06-05 11:15:00', 4, 5, 54.99, 'Transferencia'),
+('2023-07-18 13:50:00', 5, 4, 109.98, 'Tarjeta');
+
+-- Insertar datos de ejemplo en la tabla detalle_venta
+INSERT INTO detalle_venta (id_venta, id_videojuego, cantidad, precio_unitario, subtotal)
+VALUES 
+(1, 1, 1, 59.99, 59.99),
+(2, 2, 1, 49.99, 49.99),
+(2, 3, 1, 69.99, 69.99),
+(3, 4, 2, 39.99, 79.98),
+(3, 5, 1, 54.99, 54.99),
+(4, 5, 1, 54.99, 54.99),
+(5, 1, 1, 59.99, 59.99),
+(5, 3, 1, 49.99, 49.99);
